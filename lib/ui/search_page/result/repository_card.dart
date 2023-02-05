@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:yumemi_flutter/class/github_repository_class.dart';
 
 import '../../details_page/details_page.dart';
 
 class RepositoryCard extends StatelessWidget {
-  const RepositoryCard({
-    super.key,
-  });
-
+  const RepositoryCard({super.key, required this.repository});
+  final GithubRepository repository;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -21,9 +20,9 @@ class RepositoryCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
         color: const Color.fromRGBO(245, 206, 199, 1),
-        child: const Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Text("repository name"),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Text(repository.fullName),
         ),
       ),
     );

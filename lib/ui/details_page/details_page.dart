@@ -15,7 +15,7 @@ class DetailsPage extends StatelessWidget {
               color: Color.fromRGBO(255, 201, 139, 1),
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30)),
             ),
-            child: Center(
+            child: const Center(
               child: Text(
                 'repository name',
                 style: TextStyle(fontSize: 25),
@@ -23,32 +23,32 @@ class DetailsPage extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(32.0),
+            padding: const EdgeInsets.all(32.0),
             height: 200,
             child: Image.network(
                 'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
           ),
           Expanded(
             child: Container(
-              color: Color.fromRGBO(255, 201, 139, 0.2),
+              color: const Color.fromRGBO(255, 201, 139, 0.2),
               child: Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text('repository name'),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text('language'),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text('description'),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(Icons.star_border),
                       Text('2'),
                       Icon(Icons.visibility),
@@ -60,7 +60,7 @@ class DetailsPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                TextButton(onPressed: () {}, child: Text("link")),
+                TextButton(onPressed: () {}, child: const Text("link")),
               ]),
             ),
           )
