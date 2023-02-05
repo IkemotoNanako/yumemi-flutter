@@ -19,10 +19,13 @@ class RepositoryCard extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
-        color: const Color.fromRGBO(245, 206, 199, 1),
+        color: const Color.fromRGBO(245, 206, 199, 0.5),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Text(repository.fullName),
+          child: Text(
+            repository.fullName,
+            style: TextStyle(color: Colors.white),
+          ),
         ),
       ),
     );
