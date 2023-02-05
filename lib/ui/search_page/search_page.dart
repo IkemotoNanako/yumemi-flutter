@@ -9,9 +9,11 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-      child: Column(
-        children: const [SearchWidget(), BuildListCard()],
+        body: SafeArea(
+      child: Center(
+        child: Column(
+          children: const [SearchWidget(), BuildListCard()],
+        ),
       ),
     ));
   }
