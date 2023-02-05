@@ -16,10 +16,10 @@ class SearchField extends ConsumerWidget {
           ref
               .watch(searchWordProvider.notifier)
               .update((state) => state = text);
-          final users = await ref.read(searchRepositoryProvider.future);
+          final repository = await ref.read(searchRepositoryProvider.future);
           ref
               .watch(repositoryProvider.notifier)
-              .update((state) => state = users);
+              .update((state) => state = repository);
         },
         decoration: const InputDecoration(
             border: InputBorder.none, hintText: 'リポジトリを検索'));

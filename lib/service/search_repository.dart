@@ -8,11 +8,15 @@ import '../provider/provider.dart';
 final searchRepositoryProvider =
     FutureProvider<List<GithubRepository>>((ref) async {
   try {
-    final response =
-        await http.get(Uri.https('api.github.com', '/search/repositories', {
-      'q': ref.watch(searchWordProvider),
-      'sort': 'stars',
-    }));
+    final searchWord = ref.watch(searchWordProvider);
+    final response = await http.get(Uri.https(
+      'api.github.com',
+      '/search/repositories',
+      {
+        'q': searchWord,
+        'sort': 'stars',
+      },
+    ));
     switch (response.statusCode) {
       case 200:
         List<GithubRepository> list = [];
@@ -20,8 +24,12 @@ final searchRepositoryProvider =
         for (var item in decoded['items']) {
           list.add(GithubRepository.fromJson(item));
         }
+        ref.watch(errorCodeProvider.notifier).update((state) => state = 200);
         return list;
       default:
+        ref
+            .watch(errorCodeProvider.notifier)
+            .update((state) => state = response.statusCode);
         return [];
     }
   } on SocketException catch (_) {
