@@ -28,7 +28,7 @@ class BuildListCard extends ConsumerWidget {
         ),
       );
     } else {
-      return Expanded(child: Center(child: Text('リポジトリが見つかりませんでした')));
+      return const Expanded(child: Center(child: Text('検索ワードを変えてください')));
     }
   }
 }
