@@ -1,6 +1,5 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:yumemi_flutter/class/repository_class.dart';
 
 class DetailsPage extends StatelessWidget {
@@ -65,7 +64,14 @@ class DetailsPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                TextButton(onPressed: () {}, child: const Text("link")),
+                TextButton(
+                    onPressed: () async {
+                      var url = Uri.parse(repository.htmlUrl);
+                      if (await canLaunchUrl(url)) {
+                        await launchUrl(url);
+                      }
+                    },
+                    child: const Text("link")),
               ]),
             ),
           )
