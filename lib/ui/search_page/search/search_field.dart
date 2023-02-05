@@ -12,13 +12,16 @@ class SearchField extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return TextFormField(
-      onChanged: (text) async {
-        ref.watch(searchWordProvider.notifier).update((state) => state = text);
-        final users = await ref.read(searchRepositoryProvider.future);
-        ref.watch(repositoryProvider.notifier).update((state) => state = users);
-      },
-      decoration: const InputDecoration(
-          border: InputBorder.none, hintText: 'repository'),
-    );
+        onChanged: (text) async {
+          ref
+              .watch(searchWordProvider.notifier)
+              .update((state) => state = text);
+          final users = await ref.read(searchRepositoryProvider.future);
+          ref
+              .watch(repositoryProvider.notifier)
+              .update((state) => state = users);
+        },
+        decoration: const InputDecoration(
+            border: InputBorder.none, hintText: 'リポジトリを検索'));
   }
 }
