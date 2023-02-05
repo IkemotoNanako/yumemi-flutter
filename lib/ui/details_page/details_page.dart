@@ -84,6 +84,8 @@ class DetailsPage extends StatelessWidget {
                       var url = Uri.parse(repository.htmlUrl);
                       if (await canLaunchUrl(url)) {
                         await launchUrl(url);
+                      } else {
+                        throw 'Could not launch $url';
                       }
                     },
                     child: const Text("link")),
