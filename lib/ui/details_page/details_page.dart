@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:yumemi_flutter/class/repository_class.dart';
 
@@ -38,29 +36,29 @@ class DetailsPage extends StatelessWidget {
               color: const Color.fromRGBO(255, 201, 139, 0.2),
               child: Column(children: [
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(repository.fullName),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(repository.language),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text(repository.description),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.star_border),
+                      const Icon(Icons.star_border),
                       Text(repository.stargazersCount.toString()),
-                      Icon(Icons.visibility),
+                      const Icon(Icons.visibility),
                       Text(repository.watchersCount.toString()),
-                      Icon(Icons.fork_right),
+                      const Icon(Icons.fork_right),
                       Text(repository.forksCount.toString()),
-                      Icon(Icons.bug_report),
+                      const Icon(Icons.bug_report),
                       Text(repository.openIssuesCount.toString())
                     ],
                   ),
