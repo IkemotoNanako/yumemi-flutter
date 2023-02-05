@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class SearchField extends StatelessWidget {
+import '../../../provider/provider.dart';
+import '../../../service/search_repository.dart';
+
+class SearchField extends ConsumerWidget {
   const SearchField({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return TextFormField(
-      onChanged: (text) {},
+      onChanged: (text) async {
+        ref.watch(searchWordProvider.notifier).update((state) => state = text);
+        final users = await ref.read(searchRepositoryProvider.future);
+        ref.watch(repositoryProvider.notifier).update((state) => state = users);
+      },
       decoration: const InputDecoration(
           border: InputBorder.none, hintText: 'repository'),
     );
