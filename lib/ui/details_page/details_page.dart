@@ -15,7 +15,7 @@ class DetailsPage extends StatelessWidget {
           Container(
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: Color.fromRGBO(255, 201, 139, 1),
+              color: Color.fromRGBO(235, 188, 133, 1),
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30)),
             ),
             child: Padding(
@@ -23,7 +23,7 @@ class DetailsPage extends StatelessWidget {
               child: Center(
                 child: Text(
                   repository.fullName,
-                  style: const TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20, color: Colors.white),
                 ),
               ),
             ),
