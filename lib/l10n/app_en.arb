@@ -1,0 +1,6 @@
+{
+    "@@locale":"en",
+    "errorMessage": "An invalid request has been sent.",
+    "noResultMessage": "Change search terms.",
+    "searchHint": "ASearch repositories"
+}

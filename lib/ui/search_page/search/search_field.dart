@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../provider/provider.dart';
 import '../../../service/search_repository.dart';
 
@@ -21,7 +21,8 @@ class SearchField extends ConsumerWidget {
               .watch(repositoryProvider.notifier)
               .update((state) => state = repository);
         },
-        decoration: const InputDecoration(
-            border: InputBorder.none, hintText: 'リポジトリを検索'));
+        decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: AppLocalizations.of(context).searchHint));
   }
 }

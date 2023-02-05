@@ -1,0 +1,6 @@
+{
+    "@@locale":"ja",
+    "errorMessage": "不正なリクエストが送信されました",
+    "noResultMessage": "検索ワードを変えてください",
+    "searchHint": "リポジトリを検索"
+  }
