@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'ui/search_page/search_widget.dart';
+import 'ui/search_page/result/build_list_card.dart';
+import 'ui/search_page/search/search_widget.dart';
 
 void main() {
   runApp(const MainApp());
@@ -24,7 +25,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
         body: Center(
       child: Column(
-        children: const [SearchWidget()],
+        children: const [SearchWidget(), BuildListCard()],
       ),
     ));
   }
