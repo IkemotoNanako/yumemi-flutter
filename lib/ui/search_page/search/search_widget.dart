@@ -11,7 +11,7 @@ class SearchWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Color.fromRGBO(198, 192, 156, 100),
+        color: Color.fromRGBO(198, 192, 156, 0.3),
         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(50)),
       ),
       child: const Padding(
