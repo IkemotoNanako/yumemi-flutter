@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yumemi_flutter/provider/provider.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'repository_card.dart';
 
 class BuildListCard extends ConsumerWidget {
@@ -35,12 +35,14 @@ class BuildListCard extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(statusCode.toString()),
-            const Text('不正なリクエストが送信されました')
+            Text(AppLocalizations.of(context).errorMessage)
           ],
         )),
       );
     } else {
-      return const Expanded(child: Center(child: Text('検索ワードを変えてください')));
+      return Expanded(
+          child: Center(
+              child: Text(AppLocalizations.of(context).noResultMessage)));
     }
   }
 }
