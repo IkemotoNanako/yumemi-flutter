@@ -12,6 +12,7 @@ class BuildListCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final repositories = ref.watch(repositoryProvider);
+    final statusCode = ref.watch(errorCodeProvider);
     if (repositories.isNotEmpty) {
       return Expanded(
         child: Padding(
@@ -26,6 +27,17 @@ class BuildListCard extends ConsumerWidget {
                 );
               }),
         ),
+      );
+    } else if (statusCode != 200) {
+      return Expanded(
+        child: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(statusCode.toString()),
+            const Text('不正なリクエストが送信されました')
+          ],
+        )),
       );
     } else {
       return const Expanded(child: Center(child: Text('検索ワードを変えてください')));
