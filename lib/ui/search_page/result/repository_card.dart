@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yumemi_flutter/class/github_repository_class.dart';
+import 'package:yumemi_flutter/class/repository_class.dart';
 
 import '../../details_page/details_page.dart';
 
@@ -12,7 +12,8 @@ class RepositoryCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const DetailsPage()),
+          MaterialPageRoute(
+              builder: (context) => DetailsPage(repository: repository)),
         );
       },
       child: Card(

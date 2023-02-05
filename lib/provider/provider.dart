@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:yumemi_flutter/class/github_repository_class.dart';
+import 'package:yumemi_flutter/class/repository_class.dart';
 
 final searchWordProvider = StateProvider((ref) => '');
 final StateProvider<List<GithubRepository>> repositoryProvider =

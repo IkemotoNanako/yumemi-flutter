@@ -1,62 +1,67 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:yumemi_flutter/class/repository_class.dart';
 
 class DetailsPage extends StatelessWidget {
-  const DetailsPage({super.key});
+  const DetailsPage({super.key, required this.repository});
 
+  final GithubRepository repository;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
           Container(
-            height: 50,
             width: double.infinity,
             decoration: const BoxDecoration(
               color: Color.fromRGBO(255, 201, 139, 1),
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30)),
             ),
-            child: const Center(
-              child: Text(
-                'repository name',
-                style: TextStyle(fontSize: 25),
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Center(
+                child: Text(
+                  repository.fullName,
+                  style: const TextStyle(fontSize: 20),
+                ),
               ),
             ),
           ),
           Container(
             padding: const EdgeInsets.all(32.0),
             height: 200,
-            child: Image.network(
-                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+            child: Image.network(repository.owner['avatar_url']),
           ),
           Expanded(
             child: Container(
               color: const Color.fromRGBO(255, 201, 139, 0.2),
               child: Column(children: [
-                const Padding(
+                Padding(
                   padding: EdgeInsets.all(8.0),
-                  child: Text('repository name'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text('language'),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text('description'),
+                  child: Text(repository.fullName),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(repository.language),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(repository.description),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
+                    children: [
                       Icon(Icons.star_border),
-                      Text('2'),
+                      Text(repository.stargazersCount.toString()),
                       Icon(Icons.visibility),
-                      Text('500'),
+                      Text(repository.watchersCount.toString()),
                       Icon(Icons.fork_right),
-                      Text('30'),
+                      Text(repository.forksCount.toString()),
                       Icon(Icons.bug_report),
-                      Text('10')
+                      Text(repository.openIssuesCount.toString())
                     ],
                   ),
                 ),

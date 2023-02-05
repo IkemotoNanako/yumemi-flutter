@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-import '../class/github_repository_class.dart';
+import '../class/repository_class.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../provider/provider.dart';
