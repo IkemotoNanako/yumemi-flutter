@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ui/search_page/search_widget.dart';
+
 void main() {
   runApp(const MainApp());
 }
@@ -10,11 +12,20 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: MyHomePage(),
     );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+      child: Column(
+        children: const [SearchWidget()],
+      ),
+    ));
   }
 }
