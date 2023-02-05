@@ -17,26 +17,29 @@ class DetailsPage extends StatelessWidget {
               color: Color.fromRGBO(235, 188, 133, 1),
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30)),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      icon: const Icon(
-                        Icons.arrow_back,
-                        color: Colors.white,
-                      )),
-                  Text(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: const Icon(
+                          Icons.arrow_back,
+                          color: Colors.white,
+                        )),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
                     repository.fullName,
                     style: const TextStyle(fontSize: 20, color: Colors.white),
                   ),
-                  const SizedBox(width: 50)
-                ],
-              ),
+                ),
+              ],
             ),
           ),
           Container(
