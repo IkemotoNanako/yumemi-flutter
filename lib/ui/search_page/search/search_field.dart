@@ -12,6 +12,9 @@ class SearchField extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return TextFormField(
+        style: const TextStyle(
+          color: Colors.black87,
+        ),
         onChanged: (text) async {
           ref
               .watch(searchWordProvider.notifier)

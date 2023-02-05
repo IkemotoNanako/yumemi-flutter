@@ -14,7 +14,7 @@ class DetailsPage extends StatelessWidget {
           Container(
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: Color.fromRGBO(235, 188, 133, 1),
+              color: Color.fromRGBO(235, 188, 133, 0.7),
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30)),
             ),
             child: Column(
