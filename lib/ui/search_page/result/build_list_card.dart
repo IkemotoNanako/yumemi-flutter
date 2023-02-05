@@ -28,6 +28,10 @@ class BuildListCard extends ConsumerWidget {
               }),
         ),
       );
+    } else if (ref.watch(searchWordProvider).isEmpty) {
+      return Expanded(
+          child: Center(
+              child: Text(AppLocalizations.of(context).noResultMessage)));
     } else if (statusCode != 200) {
       return Expanded(
         child: Center(
