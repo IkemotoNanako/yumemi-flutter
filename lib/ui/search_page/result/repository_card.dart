@@ -25,7 +25,7 @@ class RepositoryCard extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Text(
             repository.fullName,
-            style: TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white),
           ),
         ),
       ),

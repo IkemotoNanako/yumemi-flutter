@@ -18,7 +18,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }

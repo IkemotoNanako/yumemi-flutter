@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class GithubRepository {
   GithubRepository(
       {required this.fullName,
@@ -20,7 +18,7 @@ class GithubRepository {
   final int watchersCount;
   final int forksCount;
   final int openIssuesCount;
-  final owner;
+  final dynamic owner;
 
   factory GithubRepository.fromJson(Map<String, dynamic> json) {
     return GithubRepository(
