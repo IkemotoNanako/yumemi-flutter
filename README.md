@@ -32,6 +32,24 @@ https://user-images.githubusercontent.com/66543967/216837666-00453f30-a209-4749-
 - サポートするプラットフォーム
   - iOS / Android / Web
 
+# ビルド方法
+
+ソースコードをclone
+```
+git clone https://github.com/IkemotoNanako/yumemi-flutter.git
+```
+
+pubspec.yamlファイルに記述されているパッケージをダウンロード・インストール
+```
+flutter pub get
+```
+
+多言語対応のためのファイルを生成
+```
+flutter gen-l10n
+```
+
+
 # フォルダ構成
 ```
 ├── lib
@@ -43,6 +61,18 @@ https://user-images.githubusercontent.com/66543967/216837666-00453f30-a209-4749-
 │   └── ui                                   見た目
 │       └── page　　　　　　　　　　　　　　　ページ単位
 │           ├── page.dart                    pageのdartファイル
-│           └── widget      　　　　　　　　  各種UIWidget
+│           └── function                     機能単位　　　　　　　　 
 │ 
 ```
+
+
+# アピールポイント
+
+- issue とproject を用いて複数人での開発時を意識してみました
+- デザインをかわいらしくしました
+- ダークモードに対応しました
+- 多言語対応しました
+- アニメーションを入れることで飽きが来ないようにしました
+- アプリらしくスプラッシュ画面やアイコンを設定しました
+- 様々な大きさの端末で崩れないUI にしました
+- GitHub のページに飛ぶ機能を付け加えました
