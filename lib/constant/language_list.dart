@@ -1,6 +1,5 @@
-
 final languages = [
-  "すべて",
+  "all",
   "C",
   "C++",
   "C#",
