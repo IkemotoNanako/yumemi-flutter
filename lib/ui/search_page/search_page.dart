@@ -13,7 +13,7 @@ class SearchPage extends StatelessWidget {
         body: SafeArea(
       child: Center(
         child: Column(
-          children: [SearchWidget(), SelectLanguage(), BuildListCard()],
+          children: const [SearchWidget(), SelectLanguage(), BuildListCard()],
         ),
       ),
     ));
