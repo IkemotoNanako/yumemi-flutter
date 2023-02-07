@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yumemi_flutter/provider/provider.dart';
-
-import 'language_list.dart';
+import '../../../constant/language_list.dart';
 
 class SelectLanguage extends ConsumerWidget {
   const SelectLanguage({
