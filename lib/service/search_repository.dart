@@ -27,7 +27,7 @@ final searchRepositoryProvider =
         '/search/repositories',
         {
           'q':
-              searchWord + 'language:' + languages[languageIndex].toLowerCase(),
+              '${searchWord}language:${languages[languageIndex].toLowerCase()}',
           'sort': 'stars',
         },
       ));
