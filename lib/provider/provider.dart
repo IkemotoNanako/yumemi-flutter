@@ -5,3 +5,4 @@ final searchWordProvider = StateProvider((ref) => '');
 final StateProvider<List<GithubRepository>> repositoryProvider =
     StateProvider((ref) => []);
 final errorCodeProvider = StateProvider((ref) => 200);
+final languageIndexProvider = StateProvider((ref) => 0);
