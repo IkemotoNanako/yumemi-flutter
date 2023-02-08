@@ -11,9 +11,13 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
-      child: Center(
-        child: Column(
-          children: const [SearchWidget(), SelectLanguage(), BuildListCard()],
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: () => FocusScope.of(context).unfocus(),
+        child: Center(
+          child: Column(
+            children: const [SearchWidget(), SelectLanguage(), BuildListCard()],
+          ),
         ),
       ),
     ));
