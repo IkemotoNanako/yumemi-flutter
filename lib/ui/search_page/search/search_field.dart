@@ -15,9 +15,7 @@ class SearchField extends ConsumerWidget {
           color: Colors.black87,
         ),
         onChanged: (text) async {
-          ref
-              .watch(searchWordProvider.notifier)
-              .update((state) => state = text);
+          ref.watch(searchWordProvider.notifier).state = text;
         },
         decoration: InputDecoration(
             border: InputBorder.none,

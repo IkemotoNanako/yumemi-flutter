@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final searchWordProvider = StateProvider((ref) => '');
-final errorCodeProvider = StateProvider((ref) => 200);
-final languageIndexProvider = StateProvider((ref) => 0);
+final searchWordProvider = StateProvider<String>((ref) => '');
+final errorCodeProvider = StateProvider<int>((ref) => 200);
+final languageIndexProvider = StateProvider<int>((ref) => 0);
