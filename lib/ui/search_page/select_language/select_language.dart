@@ -22,9 +22,7 @@ class SelectLanguage extends ConsumerWidget {
                 label: Text(languages[index]),
                 selected: ref.watch(languageIndexProvider) == index,
                 onSelected: (bool selected) async {
-                  ref
-                      .watch(languageIndexProvider.notifier)
-                      .update((state) => state = index);
+                  ref.watch(languageIndexProvider.notifier).state = index;
                 },
               ),
             );
