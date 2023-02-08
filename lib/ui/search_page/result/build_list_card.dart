@@ -55,7 +55,13 @@ class BuildListCard extends ConsumerWidget {
                 child: Center(
                     child: Text(AppLocalizations.of(context).noResultMessage)));
           } else if (statusCode == 422) {
-            return const Expanded(child: Center(child: Text("Loarding")));
+            return Expanded(
+              child: Container(
+                  alignment: Alignment.center,
+                  child: const CircularProgressIndicator(
+                    color: Color.fromRGBO(245, 206, 199, 1),
+                  )),
+            );
           } else if (statusCode != 200) {
             return Expanded(
               child: Center(
