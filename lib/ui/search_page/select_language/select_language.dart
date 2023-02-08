@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:yumemi_flutter/provider/provider.dart';
 import '../../../constant/language_list.dart';
-import '../../../service/search_repository.dart';
 
 class SelectLanguage extends ConsumerWidget {
   const SelectLanguage({
@@ -26,11 +25,6 @@ class SelectLanguage extends ConsumerWidget {
                   ref
                       .watch(languageIndexProvider.notifier)
                       .update((state) => state = index);
-                  final repository =
-                      await ref.read(searchRepositoryProvider.future);
-                  ref
-                      .watch(repositoryProvider.notifier)
-                      .update((state) => state = repository);
                 },
               ),
             );
