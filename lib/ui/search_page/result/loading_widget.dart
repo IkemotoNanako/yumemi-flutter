@@ -11,7 +11,7 @@ class LoadingWidget extends StatelessWidget {
       child: Container(
           alignment: Alignment.center,
           child: const CircularProgressIndicator(
-            color: Color.fromRGBO(245, 206, 199, 1),
+            color: Color.fromRGBO(245, 206, 199, 0.8),
           )),
     );
   }
