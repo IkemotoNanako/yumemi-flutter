@@ -17,7 +17,7 @@
 
 動画
 
-https://user-images.githubusercontent.com/66543967/217198595-595cb6ec-eafd-452c-966e-97890f76d092.mp4
+https://user-images.githubusercontent.com/66543967/217624050-b3477eda-bd4b-46aa-b26d-f02bcb455ad8.mp4
 
 
 # 技術スタック
@@ -79,3 +79,4 @@ flutter gen-l10n
 - 様々な大きさの端末で崩れないUI にしました
 - GitHub のページに飛ぶ機能を付け加えました
 - プログラミング言語を指定して検索できるようにしました
+- 検索中にロードアイコンを表示しました
