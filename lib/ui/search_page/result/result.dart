@@ -17,6 +17,7 @@ class Result extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final statusCode = ref.watch(errorCodeProvider);
+    final searchWord = ref.watch(searchWordProvider);
     return FutureBuilder<List<GithubRepository>>(
         future: ref.watch(searchRepositoryProvider.future),
         builder: (context, snapshot) {
@@ -28,7 +29,7 @@ class Result extends ConsumerWidget {
           }
           if (repositories.isNotEmpty) {
             return BuildListCard(repositories: repositories);
-          } else if (ref.watch(searchWordProvider).isEmpty) {
+          } else if (searchWord.isEmpty) {
             return const EnptyWidget();
           } else if (statusCode == 422) {
             return const LoadingWidget();
