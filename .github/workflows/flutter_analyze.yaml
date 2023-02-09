@@ -40,5 +40,8 @@ jobs:
       - name: flutter pub get
         run: flutter pub get
 
+      - name: flutter gen-l10n
+        run: flutter gen-l10n
+
       - name: flutter analyze
         run: flutter analyze
