@@ -45,3 +45,9 @@ jobs:
 
       - name: flutter analyze
         run: flutter analyze
+
+      - name: flutter class test
+        run: flutter test test/class/repository_class_test.dart 
+
+      - name: flutter provider test
+        run: flutter test test/provider/provider_test.dart 
