@@ -1,0 +1,47 @@
+name: flutter analyze
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - master
+
+  workflow_dispatch:
+
+jobs:
+  flutter_analyze:
+
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 5
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: flutter cache
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.7.2"
+          channel: "stable"
+          cache: true
+          cache-key: flutter
+          cache-path: ${{ runner.tool_cache }}/flutter
+
+      - name: install Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.7.2"
+          channel: "stable"
+
+      - name: flutter version
+        run: flutter --version
+
+      - name: flutter pub get
+        run: flutter pub get
+
+      - name: flutter gen-l10n
+        run: flutter gen-l10n
+
+      - name: flutter analyze
+        run: flutter analyze
