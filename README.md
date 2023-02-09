@@ -67,6 +67,10 @@ flutter gen-l10n
 │ 
 ```
 
+# 仮のデプロイ
+
+https://yumemi-flutter.web.app/
+
 
 # アピールポイント
 
