@@ -67,11 +67,6 @@ flutter gen-l10n
 │ 
 ```
 
-# 仮のデプロイ
-
-https://yumemi-flutter.web.app/
-
-
 # アピールポイント
 
 - issue とproject を用いて複数人での開発時を意識してみました
@@ -85,3 +80,4 @@ https://yumemi-flutter.web.app/
 - プログラミング言語を指定して検索できるようにしました
 - 検索中にロードアイコンを表示しました
 - テストとリントを自動化しました
+- Webでデプロイしました
