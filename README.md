@@ -9,7 +9,7 @@
 
 |  検索結果無し  |  エラー  |
 | ---- | ---- |
-|  ![検索結果0](https://user-images.githubusercontent.com/66543967/216837283-8116a783-74aa-4908-b8bc-ad48dbbe50dd.PNG)  |  ![エラー](https://user-images.githubusercontent.com/66543967/216837295-92687050-72db-4cb2-b448-d6d37a8f92c7.PNG) |
+|  ![検索結果無し](https://user-images.githubusercontent.com/66543967/217759396-cb4efb70-a87d-4c19-a32e-2bb43c0df945.PNG) |  ![エラー](https://user-images.githubusercontent.com/66543967/217759443-bbd37bd5-6efc-4d96-a4c6-5ed3dc43a8b1.PNG)|
 
 |  検索結果一覧(デスクトップ)  |  詳細(デスクトップ)  |
 | ---- | ---- |
